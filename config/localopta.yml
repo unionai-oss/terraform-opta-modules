@@ -1,6 +1,0 @@
-name: localopta
-org_name: opta
-providers: 
-  local: {}
-modules:
-  - type: local-base

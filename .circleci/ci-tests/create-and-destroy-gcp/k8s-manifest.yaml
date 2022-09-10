@@ -1,9 +1,0 @@
-name: ci-manifest
-environments:
-  - name: gcpenv-ci
-    path: "environment.yml"
-    variables: {}
-modules:
-  - name: pod
-    type: k8s-manifest
-    file_path: ../k8s-manifests/pod-manifest.yaml

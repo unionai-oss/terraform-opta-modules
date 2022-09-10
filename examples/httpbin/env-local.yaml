@@ -1,6 +1,0 @@
-name: local
-org_name: my-org
-providers: 
-  local: {}
-modules:
-  - type: local-base

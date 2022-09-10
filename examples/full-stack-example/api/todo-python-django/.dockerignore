@@ -1,6 +1,0 @@
-kubecode/
-docker-compose.yaml
-.env
-Dockerfile
-*.pyc
-.venv/
