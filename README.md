@@ -1,1 +1,1 @@
-# terraform-unionai-opta
+# terraform-opta-module

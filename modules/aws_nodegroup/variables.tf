@@ -1,7 +1,7 @@
 data "aws_region" "current" {}
 
 data "aws_eks_cluster" "main" {
-  name = "opta-${var.env_name}"
+  name = "${var.cluster_name}"
 }
 
 locals {
@@ -22,6 +22,11 @@ variable "env_name" {
 
 variable "layer_name" {
   description = "Layer name"
+  type        = string
+}
+
+variable "cluster_name" {
+  description = "Cluster name"
   type        = string
 }
 
