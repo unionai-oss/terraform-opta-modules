@@ -1,0 +1,63 @@
+{
+  "resource": [
+    {
+      "aws_route53_zone": {
+        "public": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.dns.aws_route53_zone.public",
+            "Name": "opta-${var.env_name}",
+            "opta-environment": "${var.env_name}"
+          }
+        }
+      }
+    },
+    {
+      "aws_acm_certificate": {
+        "certificate": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.dns.aws_acm_certificate.certificate",
+            "Name": "opta-${var.env_name}"
+          }
+        }
+      }
+    },
+    {
+      "aws_route53_record": {
+        "validation_record": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.dns.aws_route53_record.validation_record"
+          }
+        }
+      }
+    },
+    {
+      "aws_acm_certificate_validation": {
+        "example_com": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.dns.aws_acm_certificate_validation.example_com"
+          }
+        }
+      }
+    },
+    {
+      "aws_acm_certificate": {
+        "imported_certificate": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.dns.aws_acm_certificate.imported_certificate",
+            "Name": "opta-${var.env_name}"
+          }
+        }
+      }
+    }
+  ]
+}

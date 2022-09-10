@@ -1,0 +1,72 @@
+{
+  "resource": [
+    {
+      "aws_iam_role": {
+        "node_group": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.awsnodegroup.aws_iam_role.node_group",
+            "terraform": "true"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role_policy_attachment": {
+        "node_group_AmazonEKSWorkerNodePolicy": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.awsnodegroup.aws_iam_role_policy_attachment.node_group_AmazonEKSWorkerNodePolicy"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role_policy_attachment": {
+        "node_group_AmazonEKS_CNI_Policy": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.awsnodegroup.aws_iam_role_policy_attachment.node_group_AmazonEKS_CNI_Policy"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role_policy_attachment": {
+        "node_group_AmazonEC2ContainerRegistryReadOnly": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.awsnodegroup.aws_iam_role_policy_attachment.node_group_AmazonEC2ContainerRegistryReadOnly"
+          }
+        }
+      }
+    },
+    {
+      "random_id": {
+        "key_suffix": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.awsnodegroup.random_id.key_suffix"
+          }
+        }
+      }
+    },
+    {
+      "aws_eks_node_group": {
+        "node_group": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.awsnodegroup.aws_eks_node_group.node_group",
+            "terraform": "true"
+          }
+        }
+      }
+    }
+  ]
+}

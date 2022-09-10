@@ -1,0 +1,186 @@
+{
+  "resource": [
+    {
+      "aws_iam_openid_connect_provider": {
+        "cluster": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_iam_openid_connect_provider.cluster"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role": {
+        "node_group": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_iam_role.node_group",
+            "terraform": "true"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role_policy_attachment": {
+        "node_group_AmazonEKSWorkerNodePolicy": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_iam_role_policy_attachment.node_group_AmazonEKSWorkerNodePolicy"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role_policy_attachment": {
+        "node_group_AmazonEKS_CNI_Policy": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_iam_role_policy_attachment.node_group_AmazonEKS_CNI_Policy"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role_policy_attachment": {
+        "node_group_AmazonEC2ContainerRegistryReadOnly": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_iam_role_policy_attachment.node_group_AmazonEC2ContainerRegistryReadOnly"
+          }
+        }
+      }
+    },
+    {
+      "random_id": {
+        "key_suffix": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.random_id.key_suffix"
+          }
+        }
+      }
+    },
+    {
+      "aws_launch_template": {
+        "eks_node": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_launch_template.eks_node"
+          }
+        }
+      }
+    },
+    {
+      "aws_eks_node_group": {
+        "node_group": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_eks_node_group.node_group",
+            "terraform": "true"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role": {
+        "cluster_role": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_iam_role.cluster_role",
+            "terraform": "true"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role_policy_attachment": {
+        "cluster_AmazonEKSClusterPolicy": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_policy": {
+        "minimal_ebs_kms_create_and_attach": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_iam_policy.minimal_ebs_kms_create_and_attach"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role_policy_attachment": {
+        "cluster_minimal_ebs_kms_create_and_attache": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_iam_role_policy_attachment.cluster_minimal_ebs_kms_create_and_attache"
+          }
+        }
+      }
+    },
+    {
+      "aws_security_group": {
+        "eks": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_security_group.eks",
+            "Name": "opta-${var.layer_name}-eks_cluster_sg"
+          }
+        }
+      }
+    },
+    {
+      "aws_eks_cluster": {
+        "cluster": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_eks_cluster.cluster",
+            "terraform": "true"
+          }
+        }
+      }
+    },
+    {
+      "aws_security_group_rule": {
+        "control_plane_access": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_security_group_rule.control_plane_access"
+          }
+        }
+      }
+    },
+    {
+      "aws_cloudwatch_log_group": {
+        "cluster_logs": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}" ,
+            "tf_address": "module.k8scluster.aws_cloudwatch_log_group.cluster_logs",
+            "terraform": "true"
+          }
+        }
+      }
+    }
+  ]
+}

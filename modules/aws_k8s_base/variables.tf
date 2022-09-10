@@ -15,7 +15,7 @@ locals {
     ssl-redirect : true
     force-ssl-redirect : true
   }), var.nginx_config)
-  load_balancer_name = "opta-${substr("flyte", 0, 22)}-lb"
+  load_balancer_name = "opta-${substr(var.layer_name, 0, 22)}-lb"
 }
 
 variable "eks_cluster_name" {

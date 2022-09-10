@@ -1,0 +1,26 @@
+{
+  "resource": [
+    {
+      "helm_release": {
+        "remote_chart": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.helmchart.helm_release.remote_chart"
+          }
+        }
+      }
+    },
+    {
+      "helm_release": {
+        "local_chart": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.helmchart.helm_release.local_chart"
+          }
+        }
+      }
+    }
+  ]
+}

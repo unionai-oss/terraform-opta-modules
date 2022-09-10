@@ -1,0 +1,279 @@
+{
+  "resource": [
+    {
+      "helm_release": {
+        "metrics_server": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.helm_release.metrics_server"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_policy": {
+        "load_balancer": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.aws_iam_policy.load_balancer"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role": {
+        "load_balancer": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.aws_iam_role.load_balancer"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role_policy_attachment": {
+        "load_balancer": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.aws_iam_role_policy_attachment.load_balancer"
+          }
+        }
+      }
+    },
+    {
+      "helm_release": {
+        "load_balancer": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.helm_release.load_balancer"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_policy": {
+        "autoscaler": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.aws_iam_policy.autoscaler"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role": {
+        "autoscaler": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.aws_iam_role.autoscaler"
+          }
+        }
+      }
+    },
+    {
+      "aws_iam_role_policy_attachment": {
+        "autoscaler": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.aws_iam_role_policy_attachment.autoscaler"
+          }
+        }
+      }
+    },
+    {
+      "helm_release": {
+        "autoscaler": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.helm_release.autoscaler"
+          }
+        }
+      }
+    },
+    {
+      "tls_private_key": {
+        "trustanchor_key": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.tls_private_key.trustanchor_key"
+          }
+        }
+      }
+    },
+    {
+      "tls_self_signed_cert": {
+        "trustanchor_cert": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.tls_self_signed_cert.trustanchor_cert"
+          }
+        }
+      }
+    },
+    {
+      "tls_private_key": {
+        "issuer_key": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.tls_private_key.issuer_key"
+          }
+        }
+      }
+    },
+    {
+      "tls_cert_request": {
+        "issuer_req": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.tls_cert_request.issuer_req"
+          }
+        }
+      }
+    },
+    {
+      "tls_locally_signed_cert": {
+        "issuer_cert": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.tls_locally_signed_cert.issuer_cert"
+          }
+        }
+      }
+    },
+    {
+      "helm_release": {
+        "linkerd": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.helm_release.linkerd"
+          }
+        }
+      }
+    },
+    {
+      "helm_release": {
+        "nvidia_daemonset": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.helm_release.nvidia_daemonset"
+          }
+        }
+      }
+    },
+    {
+      "helm_release": {
+        "opta_base": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.helm_release.opta_base"
+          }
+        }
+      }
+    },
+    {
+      "time_sleep": {
+        "wait_a_bit": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.time_sleep.wait_a_bit"
+          }
+        }
+      }
+    },
+    {
+      "tls_private_key": {
+        "self_signed": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.tls_private_key.self_signed"
+          }
+        }
+      }
+    },
+    {
+      "tls_self_signed_cert": {
+        "self_signed": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.tls_self_signed_cert.self_signed"
+          }
+        }
+      }
+    },
+    {
+      "aws_acm_certificate": {
+        "self_signed": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.aws_acm_certificate.self_signed"
+          }
+        }
+      }
+    },
+    {
+      "aws_acm_certificate": {
+        "user_provided": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.aws_acm_certificate.user_provided"
+          }
+        }
+      }
+    },
+    {
+      "helm_release": {
+        "ingress-nginx": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.helm_release.ingress-nginx"
+          }
+        }
+      }
+    },
+    {
+      "aws_route53_record": {
+        "domain": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.aws_route53_record.domain"
+          }
+        }
+      }
+    },
+    {
+      "aws_route53_record": {
+        "sub_domain": {
+          "tags": {
+            "opta": "true",
+            "layer": "${var.env_name}",
+            "tf_address": "module.k8sbase.aws_route53_record.sub_domain"
+          }
+        }
+      }
+    }
+  ]
+}

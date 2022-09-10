@@ -1,6 +1,4 @@
-data "google_compute_network" "vpc" {
-  name = "opta-${var.env_name}"
-}
+data "aws_caller_identity" "current" {}
 
 variable "env_name" {
   description = "Env name"
@@ -17,17 +15,17 @@ variable "module_name" {
   type        = string
 }
 
-variable "engine_version" {
-  type    = string
-  default = "11"
-}
-
-variable "instance_tier" {
-  type    = string
-  default = "db-f1-micro"
-}
-
-variable "safety" {
+variable "fifo" {
   type    = bool
   default = false
+}
+
+variable "content_based_deduplication" {
+  type    = bool
+  default = false
+}
+
+variable "sqs_subscribers" {
+  type    = list(string)
+  default = []
 }
